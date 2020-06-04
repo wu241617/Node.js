@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Node.js模块化开发</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+				width:100%;
+			}
+			main{
+				width:600px;
+				height:auto;
+				margin:20px auto;
+				padding:20px;
+				border:2px solid black;
+				box-shadow:10px 10px 10px 10px #666;
+			}
+			section{
+				width:100%;
+				height:auto;
+			}
+			section h3{
+				height:40px;
+				line-height:40px;
+				text-align:center;
+				background-color:black;
+				color:white;
+				margin:10px 0;
+				box-shadow:2px 2px 5px 5px rgba(255,0,0,.2)
+			}
+			section p{
+				width:100%;
+				margin:20px 0;
+			} 
+			section img{
+				width:100%;
+				height:auto;
+			}
+			section span{
+				color:#f60;
+			}
+			section pre{
+				color:green;
+				font-size:16px;
+				background-color:rgba(0,0,0,.1);
+				height:auto;
+				width:100%;
+				padding:20px 10px 0 10px;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h3>JavaScript开发弊端</h3>
+				<p>JavaScript在使用的时候存在两大问题：<span>文件依赖 </span> 和 <span> 命名冲突</span></p>
+			</section>
+			<section>
+				<h3>软件中模块化开发</h3>
+				<p><span>一个功能就是一个模块</span>，多个模块可以组成完整应用，抽离一个模块不会影响其他功能的运行。</p>
+				<img src="./1.png" alt="图片加载失败!">
+			</section>
+			<section>
+				<h3>Node.js中模块化开发规范</h3>
+				<p>1,Node.js规定<span>一个JavaScript文件就是一个模块</span>，模块内部定义的变量和函数默认情况下在外部无法得到。</p>
+				<p>2,模块内部使用 <span>exports</span> 对象进行成员导出，使用 <span>require</span> 方法导入其他模块。</p>
+				<p>3,在进行模块导入时，<span>模块后缀可以省略</span>。</p>
+				<p>4,模块成员导出的另一种方法：<span>module.exports</span>
+				<pre>module.exports.version = version;
+module.exports.sayHi = sayHi;
+				</pre>
+				</p>
+				<p>5,exports对象 是 module.exports 对象的别名（地址引用关系），<span>导出对象最终以 module.exports 对象为准</span>。</p>
+				<img src="./2.png" alt="图片加载失败!">
+			</section>
+		</main>
+	</body>
+</html>
