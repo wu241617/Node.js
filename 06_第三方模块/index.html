@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第三方模块</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h3>什么是第三方模块</h3>
+				<p>别人写好的，具有特定功能的，我们能直接使用的模块即第三方模块，由于第三方模块通常由多个文件组成并且被放置在一个文件夹中，所有又名包。</p>
+			</section>
+			<section>
+				<h3>第三方模块有两种存在形式</h3>
+				<p>
+					1,以JS 文件的形式存在，提供实现项目的具体功能的API接口
+				</p>
+				<p>
+					2,以命令行工具形式存在，辅助项目开发
+				</p>
+			</section>
+			<section>
+				<h3>获取第三方模块</h3>
+				<p>npmjs.com:第三方模块的存储和分发仓库</p>
+				<p>npm(node package manager):node的第三方模块管理工具。</p>
+				<p>下载 ：npm install 模块名称</p>
+				<p>删除 ：npm uninstall 模块名称</p>
+				<p>本地安装（模块下载到当前项目目录）和全局安装（模块下载到固定目录，所有项目都能访问）：命令行工具--全局安装；库文件--本地安装。</p>
+				
+			</section>
+			<section>
+				<h3>第三方模块 nodemon </h3>
+				<p>nodemon是一个命令行工具，辅助项目开发。</p>
+				<p>在Node.js中，每次修改文件都要在命令行工具中重新执行该文件，非常繁琐。nodemon在修改文件后，重新执行该文件。</p>
+				<ul>
+					<li>使用步骤：</li>
+					<li>使用 npm install nodemon -g 下载它。</li>
+					<li>在命令行工具中用nodemon命令代替node命令执行文件。</li>
+				</ul>
+			</section>
+			<section>
+				<h3>第三方模块 nrm</h3>
+				<p>nrm(npm registry manager):npm下载地址切换工具</p>
+				<p>npm默认的下载地址在国外，国内下载速度慢</p>
+				<ul>
+					<li>使用步骤：</li>
+					<li>使用npm install nrm -g下载它</li>
+					<li>查询可用下载地址列表 nrm ls</li>
+					<li>切换npm下载地址 nrm use 下载地址名称</li>
+				</ul>
+			</section>
+			<section>
+				<h3>第三方模块 Gulp</h3>
+				<p>基于node平台开发的前端构建工具</p>
+				<p>将机械化操作编写成任务，想要执行机械化操作时执行一个命令任务就能自动执行了。</p>
+				<ul>
+					<li>Gulp能做什么？</li>
+					<li>项目上线，HTML,CSS,JS文件压缩合并</li>
+					<li>语法转换(es6,less...)</li>
+					<li>公共文件抽离</li>
+					<li>修改文件，浏览器自动刷新</li>
+				</ul>
+				<ul>
+					<li>Gulp使用</li>
+					<li>1,使用npm install gulp 下载gulp库文件</li>
+					<li>在项目根目录下创建gulpfile.js文件</li>
+					<li>重构项目的文件夹结构src目录，放置原代码文件；dist目录，放置构建后文件。</li>
+					<li>在gulpfile.js文件中编写任务。</li>
+					<li>在命令行工具中，执行这个任务</li>
+				</ul>
+				<ul>
+					<li>Gulp中提供的方法</li>
+					<li>gulp.src():获取处理的文件</li>
+					<li>gulp.dest():输出文件</li>
+					<li>gulp.task():建立gulp任务</li>
+					<li>gulp.watch():监听文件的变化</li>
+				</ul>
+				<ul>
+					<li>Gulp插件</li>
+					<li>gulp-htmlmin:html文件压缩</li>
+					<li>gulp-csso:压缩css</li>
+					<li>gulp-babel:JavaScript语法转换</li>
+					<li>gulp-less:less语法转化</li>
+					<li>gulp-uglify:压缩混淆JavaScript</li>
+					<li>gulp-file-include:公共文件包含</li>
+					<li>browsersync:浏览器实时同步</li>
+				</ul>
+				<ul>
+					<li>gulp插件的使用</li>
+					<li>npm 安装</li>
+					<li>gulpfile.js文件中导入</li>
+					<li>具体场景中使用</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

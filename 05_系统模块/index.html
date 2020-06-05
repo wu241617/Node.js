@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>系统模块</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h3>什么是系统模块</h3>
+				<p>Node运行环境提供的API，因为这些API都是以模块化的方式进行开发的，所以我们又称Node运行环境提供的API为系统模块。</p>
+			</section>
+			<section>
+				<h3>系统模块 fs 文件操作</h3>
+				<p>f:file文件，s:system系统，文件操作系统。</p>
+				<p>请求模块：const fs = require('fs');</p>
+				<p>读取文件内容：fs.readFile('文件路径/文件名称'，'[文件编码]'，callback);</p>
+				<p>[]表示可选，callback表示文件读取的结果</p>
+				<p>读取文件语法实例
+<pre>
+	//读取上一层css目录下的base.css
+	fs.readFile('../css/base.css,'utf-8',(err,doc) => {
+	//如果文件读取发生错误，参数err的值为错误的对象，否则err的值为null;
+	//doc参数为文件内容
+	if(err == null){
+		//在控制台中输出文件内容
+		console.log(doc);
+	}
+	});
+</pre>
+				</p>
+			</section>
+			<section>
+				<h3>系统模块 fs 文件操作</h3>
+				<p>写入文件内容 fs.writeFile('文件路径/文件名称'，'数据'，callback);</p>
+				<p>写入文件内容实例
+<pre>
+	const content = '<h3>正在使用fs.writeFile写入文件内容。</h3>'
+	fs.writeFile('../index.html',content,err => {
+		if(err != null){
+			console.log(err);
+			return;
+		}
+		console.log('文件写入成功!');
+	});
+</pre>				
+				</p>
+			</section>
+			<section>
+				<h3>系统模块 path 路径操作（路径拼接API）</h3>
+				<p>为什么要进行路径拼接？</p>
+				<p>不同操作系统的路径分隔符不统一</p>
+				<p>Window上是 \ 或 /</p>
+				<p>Linux上是 /</p>
+				<p>路径拼接语法 path.join('xxx','yyy',...);</p>
+				<p>代码实例
+<pre>
+	//导入path模块
+	const path = require('path');
+	//路径拼接
+	let finialPath = path.join('itcast','a','c.css');
+	//输出结果 itcast\a\b\c.css
+	console.log(finialPath);
+</pre>
+				</p>
+			</section>
+			<section>
+				<h3>相对路径VS绝对路径</h3>
+				<p>大多数情况下使用绝对路径，相对路径有时候相对的是命令行工具的当前目录。</p>
+				<p>在读取文件或者是指文件路径时都会选择绝对路径</p>
+				<p>通过__dirname获取当前文件所在的绝对路径</p>
+			</section>
+		</main>
+	</body>
+</html>
